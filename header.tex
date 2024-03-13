@@ -3,6 +3,12 @@
 
 
 \usepackage{fontenc}
+\usepackage{textcomp}
+\usepackage{helvet}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
 \usepackage{booktabs}
 
 
@@ -13,105 +19,104 @@
   width=0.9\textwidth, % maximale Breite einer Caption schmaler
   format=hang,
   justification=raggedright,
-]{caption}
-\usepackage[english]{babel}
-\usepackage{csquotes}
-% unverzichtbare Mathe-Befehle
-\usepackage{amsmath}
-% viele Mathe-Symbole
-\usepackage{amssymb}
-% Erweiterungen für amsmath
-\usepackage{mathtools}
-% subfigure, subtable, subref
-\usepackage{subcaption}
-\usepackage{physics}
-% Grafiken können eingebunden werden
-\usepackage{graphicx}
-% größere Variation von Dateinamen möglich
-\usepackage{grffile}
-% Verbesserungen am Schriftbild
-\usepackage{microtype}
-
-\usepackage{xargs}
-
-% % Hyperlinks im Dokument
-% \usepackage[
-%   german,
-%   unicode,        % Unicode in PDF-Attributen erlauben
-%   pdfusetitle,    % Titel, Autoren und Datum als PDF-Attribute
-%   pdfcreator={},  % ┐ PDF-Attribute säubern
-%   pdfproducer={}, % ┘
-% ]{hyperref}
-% % erweiterte Bookmarks im PDF
-% \usepackage{bookmark}
-
-%Trennung von Wörtern mit Strichen
-\usepackage[shortcuts]{extdash}
-
-\usepackage{catchfile}
-\usepackage{xfrac}
-
-% \usepackage[%
-%   autocite    = superscript,
-%   backend     = biber,
-%   sortcites   = true,
-%   style       = numeric,
-%   ]{biblatex}
-% \DeclareCiteCommand{\supercite}[\mkbibsuperscript]{
-%   \iffieldundef{prenote}
-%   {}
-%   {\BibliographyWarning{Ignoring prenote argument}}%
-%   \iffieldundef{postnote}
-%   {}
-%   {}
-% }
-% {\bibopenbracket%
-%   \usebibmacro{citeindex}%
-%   \usebibmacro{cite}%
-%   \usebibmacro{postnote}%
-%   \bibclosebracket}
-% {\supercitedelim}
-% {}
-% \newcommandx*\citeauthyear[3][2=(,3=)]{\textsuperscript{#2\citeauthor{#1}~\citeyear{#1}#3}}
-% \newcommandx*\twociteauthyear[4][3=(,4=)]{\textsuperscript{#3\citeauthor{#1}~\citeyear{#1},~\citeauthor{#2}~\citeyear{#2}#4}}
-% \newcommand{\mycaption}[1]{
+  ]{caption}
+  \usepackage[english]{babel}
+  \usepackage{csquotes}
+  % unverzichtbare Mathe-Befehle
+  \usepackage{amsmath}
+  % viele Mathe-Symbole
+  \usepackage{amssymb}
+  % Erweiterungen für amsmath
+  \usepackage{mathtools}
+  % subfigure, subtable, subref
+  \usepackage{subcaption}
+  \usepackage{physics}
+  % Grafiken können eingebunden werden
+  \usepackage{graphicx}
+  % größere Variation von Dateinamen möglich
+  \usepackage{grffile}
+  % Verbesserungen am Schriftbild
+  \usepackage{microtype}
   
-% \stepcounter{figure}\footnotesize\textbf{Figure \arabic{figure}:} #1\normalsize
-% }
-\newcommand\sub[1]{\ensuremath{_{\mathrm{#1}}}}
-%\newcommmand\arrowitem{\item[$\rightarrow$]}
-% \addbibresource{bibliography.bib}
-% ç
-\usepackage[
-  math-style=ISO,    % ┐
-  bold-style=ISO,    % │
-  sans-style=italic, % │ ISO-Standard folgen
-  nabla=upright,     % │
-  partial=upright,   % ┘
-  warnings-off={           % ┐
-    mathtools-colon,       % │ unnötige Warnungen ausschalten
-    mathtools-overbracket, % │
-  },                       % ┘
-]{unicode-math}
-\usepackage{multicol}
-\usepackage[
-  locale=US,                   % deutsche Einstellungen
-  separate-uncertainty=true,   % immer Fehler mit \pm
-  per-mode=symbol-or-fraction, % / in inline math, fraction in display math
-]{siunitx}
-
-\usepackage{xfrac}
-\sisetup{per-mode = fraction, separate-uncertainty,quotient-mode=fraction,math-micro=\text{µ},text-micro=µ,detect-family,detect-display-math = true}
-%\renewcommand{\boxed}[1]{\text{\fboxsep=.2em\fbox{\m@th$\displaystyle#1$}}}
-\usepackage{capt-of}
-
-% \usepackage{textcomp}
-% \usepackage{mathptmx}
-% \usepackage{helvet}
-% \setbeamertemplate{navigation symbols}{}
-% \setbeamercovered{transparent}
-% \usefonttheme[onlymath]{serif}
-\usepackage{xfrac}
-\usepackage{times}
-\usepackage{lipsum}
-\setmathfont{XITSMath-Regular}
+  \usepackage{xargs}
+  
+  % % Hyperlinks im Dokument
+  % \usepackage[
+    %   german,
+    %   unicode,        % Unicode in PDF-Attributen erlauben
+    %   pdfusetitle,    % Titel, Autoren und Datum als PDF-Attribute
+    %   pdfcreator={},  % ┐ PDF-Attribute säubern
+    %   pdfproducer={}, % ┘
+    % ]{hyperref}
+    % % erweiterte Bookmarks im PDF
+    % \usepackage{bookmark}
+    
+    %Trennung von Wörtern mit Strichen
+    \usepackage[shortcuts]{extdash}
+    
+    \usepackage{catchfile}
+    \usepackage{xfrac}
+    
+    % \usepackage[%
+    %   autocite    = superscript,
+    %   backend     = biber,
+    %   sortcites   = true,
+    %   style       = numeric,
+    %   ]{biblatex}
+    % \DeclareCiteCommand{\supercite}[\mkbibsuperscript]{
+      %   \iffieldundef{prenote}
+      %   {}
+      %   {\BibliographyWarning{Ignoring prenote argument}}%
+      %   \iffieldundef{postnote}
+      %   {}
+      %   {}
+      % }
+      % {\bibopenbracket%
+      %   \usebibmacro{citeindex}%
+      %   \usebibmacro{cite}%
+      %   \usebibmacro{postnote}%
+      %   \bibclosebracket}
+      % {\supercitedelim}
+      % {}
+      % \newcommandx*\citeauthyear[3][2=(,3=)]{\textsuperscript{#2\citeauthor{#1}~\citeyear{#1}#3}}
+      % \newcommandx*\twociteauthyear[4][3=(,4=)]{\textsuperscript{#3\citeauthor{#1}~\citeyear{#1},~\citeauthor{#2}~\citeyear{#2}#4}}
+      % \newcommand{\mycaption}[1]{
+        
+        % \stepcounter{figure}\footnotesize\textbf{Figure \arabic{figure}:} #1\normalsize
+        % }
+        \newcommand\sub[1]{\ensuremath{_{\mathrm{#1}}}}
+        %\newcommmand\arrowitem{\item[$\rightarrow$]}
+        % \addbibresource{bibliography.bib}
+        % ç
+        \usepackage[
+          math-style=ISO,    % ┐
+          bold-style=ISO,    % │
+          sans-style=italic, % │ ISO-Standard folgen
+          nabla=upright,     % │
+          partial=upright,   % ┘
+          warnings-off={           % ┐
+          mathtools-colon,       % │ unnötige Warnungen ausschalten
+          mathtools-overbracket, % │
+          },                       % ┘
+          ]{unicode-math}
+          \usepackage{multicol}
+          \usepackage[
+            locale=US,                   % deutsche Einstellungen
+            separate-uncertainty=true,   % immer Fehler mit \pm
+            per-mode=symbol-or-fraction, % / in inline math, fraction in display math
+            ]{siunitx}
+            
+            \usepackage{xfrac}
+            \sisetup{per-mode = fraction, separate-uncertainty,quotient-mode=fraction,math-micro=\text{µ},text-micro=µ,detect-family,detect-display-math = true}
+            %\renewcommand{\boxed}[1]{\text{\fboxsep=.2em\fbox{\m@th$\displaystyle#1$}}}
+            \usepackage{capt-of}
+            
+            % \usepackage{textcomp}
+            % \usepackage{mathptmx}
+            % \usepackage{helvet}
+            % \setbeamertemplate{navigation symbols}{}
+            % \setbeamercovered{transparent}
+            % \usefonttheme[onlymath]{serif}
+            \usepackage{xfrac}
+            
+            \setmathfont{XITSMath-Regular}
